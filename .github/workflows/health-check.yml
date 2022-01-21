@@ -1,7 +1,12 @@
-name: Scheduled Health Check
+---
+name: Health Check
 
 # Controls when the action will run.
-on:
+'on':
+  workflow_dispatch:
+  push:
+    branches:
+      - master
   schedule:
     - cron: "30 * * * *"
 
